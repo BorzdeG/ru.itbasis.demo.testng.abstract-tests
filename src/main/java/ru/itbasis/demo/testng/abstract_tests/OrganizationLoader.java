@@ -11,24 +11,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrganizationLoader {
-	private Organization organization;
 
-	public OrganizationLoader(File orgDirectory) {
-		organization = null;
+	private OrganizationLoader() {
+	}
 
+	public static Organization loader(File orgDirectory) {
 		if (orgDirectory == null || !orgDirectory.exists() || !orgDirectory.isDirectory()) {
-			return;
+			return null;
 		}
 
 		final File[] files = orgDirectory.listFiles();
 		if (files == null || files.length < 1) {
-			return;
+			return null;
 		}
 
 		XStream xStream = new XStream();
-		xStream.autodetectAnnotations(true);
+		xStream.processAnnotations(Department.class);
 
-		organization = new Organization();
+		Organization organization = new Organization();
 
 		List<Department> departments = new ArrayList<>();
 		for (File file : files) {
@@ -41,9 +41,8 @@ public class OrganizationLoader {
 			}
 		}
 		organization.setDepartments(departments);
-	}
 
-	public Organization getOrganization() {
 		return organization;
 	}
+
 }

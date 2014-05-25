@@ -1,14 +1,15 @@
 package ru.itbasis.demo.testng.abstract_tests.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 @XStreamAlias("employee")
 public class Employee {
-	@XStreamAlias("lastName")
+	@XStreamAsAttribute
 	private String lastName;
-	@XStreamAlias("firstName")
+	@XStreamAsAttribute
 	private String firstName;
-	@XStreamAlias("middleName")
+	@XStreamAsAttribute
 	private String middleName;
 
 	public String getFirstName() {
