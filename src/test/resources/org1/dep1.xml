@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<department>
+	<name>dep1</name>
+	<employees>
+		<employee lastName="empLastName1_0" firstName="empFirstName1_0" middleName="empMiddleName1_0" />
+		<employee lastName="empLastName1_1" firstName="empFirstName1_1" middleName="empMiddleName1_1" />
+	</employees>
+</department>
