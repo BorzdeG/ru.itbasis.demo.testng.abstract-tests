@@ -10,7 +10,6 @@ public class Organization0Test extends AbstractTests {
 	}
 
 	@DataProvider
-	@Override
 	public Object[][] dataDepartmentCount() {
 		return new Object[][]{{2}};
 	}

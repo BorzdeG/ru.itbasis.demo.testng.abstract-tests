@@ -17,11 +17,6 @@ abstract public class AbstractTests {
 	abstract protected String getOrgName();
 
 	@DataProvider
-	public Object[][] dataDepartmentCount() {
-		return new Object[][]{};
-	}
-
-	@DataProvider
 	public Object[][] dataEmployeeCount() {
 		return new Object[][]{};
 	}
